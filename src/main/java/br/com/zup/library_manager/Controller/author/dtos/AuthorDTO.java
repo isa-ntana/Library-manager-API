@@ -1,10 +1,20 @@
 package br.com.zup.library_manager.Controller.author.dtos;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class AuthorDTO {
     private Long id;
+
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String lastName;
+
+    @NotBlank
     private int yearOfBirth;
+
+    @NotBlank
     private int yearOfDeath;
 
     public AuthorDTO() {}
