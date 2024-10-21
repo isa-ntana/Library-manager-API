@@ -3,8 +3,6 @@ package br.com.zup.library_manager.Controller.author.dtos;
 import jakarta.validation.constraints.NotBlank;
 
 public class AuthorDTO {
-    private Long id;
-
     @NotBlank
     private String name;
 
@@ -18,14 +16,6 @@ public class AuthorDTO {
     private int yearOfDeath;
 
     public AuthorDTO() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

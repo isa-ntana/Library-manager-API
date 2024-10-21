@@ -7,8 +7,6 @@ import jakarta.validation.constraints.Size;
 import java.util.List;
 
 public class BookDTO {
-    private Long id;
-
     @NotBlank
     private String title;
 
@@ -20,14 +18,6 @@ public class BookDTO {
     private List<AuthorDTO> authors;
 
     public BookDTO() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -45,7 +35,7 @@ public class BookDTO {
         this.description = description;
     }
 
-    public List<AuthorDTO> getAuthors() {
+    public @NotBlank @Size(max = 5, message = "Um livro deve ter no máximo 5 autores") List<AuthorDTO> getAuthors() {
         return authors;
     }
 
