@@ -1,5 +1,6 @@
 package br.com.zup.library_manager.Models;
 
+import br.com.zup.library_manager.Controller.author.dtos.AuthorDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
@@ -59,7 +60,7 @@ public class Book {
         return authors;
     }
 
-    public void setAuthors(List<Author> authors) {
+    public void setAuthors(@NotBlank @Size List<AuthorDTO> authors) {
         this.authors = authors;
     }
 }
