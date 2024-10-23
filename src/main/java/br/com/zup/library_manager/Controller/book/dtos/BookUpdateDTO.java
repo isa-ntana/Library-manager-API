@@ -2,10 +2,14 @@ package br.com.zup.library_manager.Controller.book.dtos;
 
 import br.com.zup.library_manager.Controller.author.dtos.AuthorDTO;
 import jakarta.validation.constraints.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 public class BookUpdateDTO {
+    @Setter
+    @Getter
     private Long id;
 
     @NotBlank
@@ -19,14 +23,6 @@ public class BookUpdateDTO {
     private List<AuthorDTO> authors;
 
     public BookUpdateDTO() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public @NotBlank String getTitle() {
         return title;

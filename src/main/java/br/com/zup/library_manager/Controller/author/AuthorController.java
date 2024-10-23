@@ -1,6 +1,7 @@
 package br.com.zup.library_manager.Controller.author;
 
 import br.com.zup.library_manager.Controller.author.dtos.AuthorDTO;
+import br.com.zup.library_manager.Controller.author.dtos.AuthorUpdateDTO;
 import br.com.zup.library_manager.Models.Author;
 import br.com.zup.library_manager.Service.AuthorService;
 import br.com.zup.library_manager.Service.Mappers.AuthorMapper;
@@ -29,4 +30,9 @@ public class AuthorController {
 
     @DeleteMapping("/{authorId}")
     public void deleteAuthorById(@PathVariable Long authorId) { authorService.deleteAuthor(authorId); }
+
+    @PutMapping
+    public Author updateAuthor(@RequestBody @Valid AuthorUpdateDTO authorUpdateDTO){
+        return authorService.updateAuthor(AuthorMapper.fromAuthorUpdateDTO(authorUpdateDTO));
+    }
 }
