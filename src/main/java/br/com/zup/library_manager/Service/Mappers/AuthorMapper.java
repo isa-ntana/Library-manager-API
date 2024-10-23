@@ -15,7 +15,7 @@ public class AuthorMapper {
         return author;
     }
 
-    public static Author forAuthorUpdateDTO(AuthorUpdateDTO authorUpdateDTO) {
+    public static Author fromAuthorUpdateDTO(AuthorUpdateDTO authorUpdateDTO) {
         Author author = new Author();
         author.setId(authorUpdateDTO.getId());
         author.setName(authorUpdateDTO.getName());

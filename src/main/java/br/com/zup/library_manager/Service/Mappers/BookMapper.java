@@ -19,7 +19,7 @@ public class BookMapper {
         return book;
     }
 
-    public static Book forBookUpdatedDTO(BookUpdateDTO bookUpdateDTO) {
+    public static Book fromBookUpdatedDTO(BookUpdateDTO bookUpdateDTO) {
         Book book = new Book();
         book.setId(bookUpdateDTO.getId());
         book.setTitle(bookUpdateDTO.getTitle());
