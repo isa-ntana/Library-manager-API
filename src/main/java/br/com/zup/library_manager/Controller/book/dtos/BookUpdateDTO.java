@@ -10,6 +10,7 @@ import java.util.List;
 public class BookUpdateDTO {
     @Setter
     @Getter
+    @NotNull
     private Long id;
 
     @NotBlank
@@ -18,7 +19,6 @@ public class BookUpdateDTO {
     @NotBlank
     private String description;
 
-    @NotBlank
     @Size(max=5, message="Um livro deve ter no máximo 5 autores")
     private List<AuthorDTO> authors;
 
@@ -40,11 +40,11 @@ public class BookUpdateDTO {
         this.description = description;
     }
 
-    public @NotBlank @Size(max = 5, message = "Um livro deve ter no máximo 5 autores") List<AuthorDTO> getAuthors() {
+    public @Size(max = 5, message = "Um livro deve ter no máximo 5 autores") List<AuthorDTO> getAuthors() {
         return authors;
     }
 
-    public void setAuthors(@NotBlank @Size(max = 5, message = "Um livro deve ter no máximo 5 autores") List<AuthorDTO> authors) {
+    public void setAuthors(@Size(max = 5, message = "Um livro deve ter no máximo 5 autores") List<AuthorDTO> authors) {
         this.authors = authors;
     }
 }
