@@ -14,10 +14,10 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank(message = "O título não pode estar em branco")
+    @NotNull(message = "O título não pode estar em branco")
     private String title;
 
-    @NotBlank(message = "A descrição não pode estar em branco")
+    @NotNull(message = "A descrição não pode estar em branco")
     private String description;
 
     @Size(max = 5, message = "Um livro pode ter no máximo 5 autores")
