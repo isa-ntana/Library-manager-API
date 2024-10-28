@@ -2,9 +2,12 @@ package br.com.zup.library_manager.Controller.author;
 
 import br.com.zup.library_manager.Controller.author.dtos.AuthorDTO;
 import br.com.zup.library_manager.Controller.author.dtos.AuthorUpdateDTO;
+import br.com.zup.library_manager.Controller.book.dtos.BookUpdateDTO;
 import br.com.zup.library_manager.Models.Author;
+import br.com.zup.library_manager.Models.Book;
 import br.com.zup.library_manager.Service.AuthorService;
 import br.com.zup.library_manager.Service.Mappers.AuthorMapper;
+import br.com.zup.library_manager.Service.Mappers.BookMapper;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
