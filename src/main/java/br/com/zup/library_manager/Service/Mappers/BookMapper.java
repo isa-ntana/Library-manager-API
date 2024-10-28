@@ -4,11 +4,14 @@ import br.com.zup.library_manager.Controller.book.dtos.BookDTO;
 import br.com.zup.library_manager.Controller.book.dtos.BookUpdateDTO;
 import br.com.zup.library_manager.Models.Author;
 import br.com.zup.library_manager.Models.Book;
+import br.com.zup.library_manager.Repositories.AuthorRepository;
 
 import java.util.List;
 
 public class BookMapper {
     public static Book fromBookDTO(BookDTO bookDTO) {
+        AuthorRepository authorRepository;
+
         Book book = new Book();
         book.setTitle(bookDTO.getTitle());
         book.setDescription(bookDTO.getDescription());
